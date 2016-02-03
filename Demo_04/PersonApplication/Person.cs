@@ -23,6 +23,11 @@ namespace PersonApplication
             Address = address;
         }
 
+        public void PersonMethod()
+        {
+            Console.WriteLine("Person does something...");
+        }
+
         public override string ToString()
         {
             return Firstname + " " + Lastname + " " + Address;

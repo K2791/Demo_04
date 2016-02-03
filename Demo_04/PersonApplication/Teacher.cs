@@ -6,11 +6,30 @@ using System.Threading.Tasks;
 
 namespace PersonApplication
 {
-    class Teacher
-    {
-        public string Firstname { get; set; }
-        public string Lastname { get; set; }
-        public string Address { get; set; }
-        public string Room { get; set; }
+    class Teacher : Person
+        {
+            public string Room { get; set; }
+
+            public Teacher()
+            {
+            }
+
+            public Teacher(string firstname, string lastname, string address, string room)
+                : base(firstname, lastname, address)
+            {
+                Room = room;
+            }
+
+            public void TeacherMethod()
+            {
+            Console.WriteLine("Typing very fast...");
+            }
+
+            //ylikirjoitetaan person luokan tostring metodi
+            public override string ToString()
+            {
+                return base.ToString() + " " + Room;
+            }
+
+        }
     }
-}

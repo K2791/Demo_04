@@ -4,16 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarApplication
+namespace RadioApplication
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Car car = new Car();
-            car.Speed = 300;
-            car.maxSpeed = 300;
-            Console.WriteLine("Speed is {0}", car.Speed);
+            Console.WriteLine("Radio is on - what do you want to do?");
+
+            RadioFrequency radiovolume = new RadioVolume();
+            radiovolume.Volume = Console.Read();
+            Console.WriteLine("Volume is {0}", radiovolume.Volume);
+
+            RadioFrequency radiofrequency = new RadioFrequency();
+            radiofrequency.Frequency = Console.Read();
+            Console.WriteLine("Frequency is {0}", radiofrequency.Frequency);
         }
     }
 }
